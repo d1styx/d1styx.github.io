@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>BINTED - Faire un don</title>
+    <link rel="stylesheet" href="style.css?v=99">
+    <link rel="stylesheet" href="fa/css/all.min.css">
+<link rel="stylesheet" href="demo.css">
+<script src="demo.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="./img/logoSiteT.png" alt="Logo BINTED" class="logo-img"> BINTED
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="don.html" class="btn-don">Faire un don</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Soutenez notre mission</h1>
+        <p>Votre don permet de financer la logistique de récupération des vêtements et l'achat de matériel de couture.</p>
+    </section>
+
+    <div class="container">
+        
+        <div class="form-container">
+            <h2 class="text-center mb-1" style="margin-bottom: 2rem;">Je fais un don</h2>
+            
+            <form action="traitement_don.php" method="POST">
+    
+    <div class="form-group">
+        <label>Montant du don</label>
+        
+        <div class="amount-selector flex-between gap-10 mb-1">
+            <input type="radio" id="d20" name="choix_montant" value="20">
+            <label for="d20" class="btn-amount-label">20€</label>
+
+            <input type="radio" id="d50" name="choix_montant" value="50">
+            <label for="d50" class="btn-amount-label">50€</label>
+
+            <input type="radio" id="d100" name="choix_montant" value="100">
+            <label for="d100" class="btn-amount-label">100€</label>
+        </div>
+
+        <input type="number" name="montant_libre" placeholder="Autre montant (€)" min="1">
+    </div>
+
+    <div class="form-group">
+        <label for="statut">Vous êtes :</label>
+        <select name="statut" id="statut" required>
+            <option value="particulier">Particulier</option>
+            <option value="entreprise">Entreprise</option>
+            <option value="association">Association</option>
+            <option value="autre">Autre</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Vos coordonnées</label>
+        <div class="flex-between gap-10 mb-1">
+            <input type="text" name="prenom" placeholder="Prénom" required>
+            <input type="text" name="nom" placeholder="Nom" required>
+        </div>
+        <input type="email" name="email" placeholder="Email" required>
+    </div>
+
+    <button type="submit" style="font-size: 1.1rem; font-weight: bold;">Valider mon don</button>
+</form>
+        </div>
+
+        <div class="grid-3 text-center" style="margin-top: 4rem;">
+            <div class="card">
+                <i class="fas fa-truck icon-lg" style="color: var(--primary);"></i>
+                <h3>20€</h3>
+                <p>Finance le transport de 50kg de vêtements sauvés.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-tools icon-lg" style="color: var(--primary);"></i>
+                <h3>50€</h3>
+                <p>Achète du fil, des aiguilles et des boutons pour l'atelier.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-home icon-lg" style="color: var(--primary);"></i>
+                <h3>100€</h3>
+                <p>Permet d'habiller une famille de 5 à 10 personnes.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem; color: #fff;">
+                        <img src="./img/logoSiteT.png" alt="Logo" class="logo-img" style="filter: brightness(0) invert(1);"> 
+                        BINTED
+                    </a>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">
+                        Nous récupérons, réparons et redistribuons les vêtements pour lutter contre la pollution textile. 
+                        <br>Un projet étudiant engagé pour les ODD 12, 13 et 15.
+                    </p>
+                </div>
+                <div>
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Navigation</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="shop.html" style="color: #a8a29e;">Boutique Solidaire</a></li>
+                        <li><a href="info.html" style="color: #a8a29e;">Notre Mission</a></li>
+                        <li><a href="contact.html" style="color: #a8a29e;">Devenir Partenaire</a></li>
+                        <li><a href="don.html" style="color: #a8a29e;">Faire un don</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Nous trouver</h3>
+                    <p><i class="fas fa-envelope"></i> contact@binted.org</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Anglet, France</p>
+                    <div style="margin-top: 1rem; display: flex; gap: 10px;">
+                        <a href="#" style="font-size: 1.2rem; color:white;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="font-size: 1.2rem; color:white;"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #333; font-size: 0.8rem;">
+                &copy; 2025 BINTED - Projet SAE. Tous droits réservés.
+            </div>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>BINTED - Contact</title>
+    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="fa/css/all.min.css">
+<link rel="stylesheet" href="demo.css">
+<script src="demo.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="./img/logoSiteT.png" alt="Logo BINTED" class="logo-img"> BINTED
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="contact.html" class="active" style="color:var(--primary)">Contact</a></li>
+                <li><a href="don.html" class="btn-don">Faire un don</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="split-screen-container">
+        
+        <div class="split-image">
+            <div class="overlay-text">
+                <h2>Parlons <br>Avenir</h2>
+                <p>Vos questions et vos idées nous aident à faire grandir le projet.</p>
+            </div>
+        </div>
+
+        <div class="split-content">
+            <div class="content-wrapper">
+                <h2 class="mb-1">Contactez l'équipe</h2>
+                <p class="text-muted mb-1">Remplissez ce formulaire, nous vous répondrons sous 24h.</p>
+
+                <script>
+                    // Si l'URL contient "?success=1", on affiche le message vert
+                    if (window.location.search.includes('success=1')) {
+                        document.write('<div style="background:#d1fae5; color:#065f46; padding:10px; border-radius:8px; margin-bottom:15px; border:1px solid #10b981;">✅ Votre message a bien été envoyé !</div>');
+                    }
+                </script>
+
+                <div class="contact-mini-infos">
+                    <span><i class="fas fa-envelope"></i> contact@binted.org</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Anglet, FR</span>
+                </div>
+
+                <form action="traitement_contact.php" method="POST" class="modern-form">
+                    
+                    <div class="form-group">
+                        <label>Je suis :</label>
+                        <div class="radio-buttons-group">
+                            <label><input type="radio" name="type" value="Particulier" checked> <span>Particulier</span></label>
+                            <label><input type="radio" name="type" value="Entreprise"> <span>Entreprise</span></label>
+                            <label><input type="radio" name="type" value="Association"> <span>Asso</span></label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="nom" required placeholder="Votre Nom">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" required placeholder="Votre Email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="message" rows="4" required placeholder="Votre message..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-full">Envoyer <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom: 1rem; color: #fff;">
+                    <img src="./img/logoSiteT.png" alt="Logo" class="logo-img" style="filter: brightness(0) invert(1);"> 
+                    BINTED
+                </a>
+                <p style="font-size: 0.9rem; line-height: 1.6;">
+                    Nous récupérons, réparons et redistribuons les vêtements pour lutter contre la pollution textile. 
+                    <br>Un projet étudiant engagé pour les ODD 12, 13 et 15.
+                </p>
+            </div>
+            <div>
+                <h3 style="color: #fff; margin-bottom: 1rem;">Navigation</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="shop.html" style="color: #a8a29e;">Boutique Solidaire</a></li>
+                    <li><a href="info.html" style="color: #a8a29e;">Notre Mission</a></li>
+                    <li><a href="contact.html" style="color: #a8a29e;">Devenir Partenaire</a></li>
+                    <li><a href="don.html" style="color: #a8a29e;">Faire un don</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #fff; margin-bottom: 1rem;">Nous trouver</h3>
+                <p><i class="fas fa-envelope"></i> contact@binted.org</p>
+                <p><i class="fas fa-map-marker-alt"></i> Anglet, France</p>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #333; font-size: 0.8rem;">
+            &copy; 2025 BINTED - Projet SAE. Tous droits réservés.
+        </div>
+    </footer>
+</body>
+</html>

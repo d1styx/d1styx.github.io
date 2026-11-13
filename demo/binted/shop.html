@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>BINTED - Boutique Solidaire</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="fa/css/all.min.css">
+<link rel="stylesheet" href="demo.css">
+<script src="demo.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="./img/logoSiteT.png" alt="Logo BINTED" class="logo-img"> BINTED
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="don.html" class="btn-don">Faire un don</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="shop-intro">
+        <div class="container text-center">
+            <span class="badge-artistique">Art & Recyclage</span>
+            <h2>Une mode qui a du sens</h2>
+            <p>
+                Chaque pièce de cette boutique est un vêtement sauvé de la décharge, réparé et 
+                <strong>stylisé par des artistes locaux</strong>.
+            </p>
+            <p style="margin-top: 0.5rem; font-weight: 500;">
+                <i class="fas fa-heart" style="color: var(--primary);"></i> 
+                100% des bénéfices financent directement nos actions de dépollution.
+            </p>
+        </div>
+    </section>
+
+    
+    <div class="filters-bar">
+        <div class="container" style="padding: 10px 20px;">
+            <div class="flex-between">
+                
+                <div style="display:flex; align-items:center; gap: 15px;">
+                    <button class="btn-panier">
+                        <i class="fas fa-shopping-cart"></i> Mon Panier 
+                        <span class="cart-badge">0</span>
+                    </button>
+                    <span>Total : <strong style="color:var(--primary); font-size:1.2rem;">0€</strong></span>
+                </div>
+
+                <div style="display:flex; gap: 10px; align-items: center;">
+                                            <span style="font-size: 0.9rem; color: #666;">Votre panier est vide.</span>
+                                    </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+       <div class="grid-3">
+    
+    <div class="card">
+        <div class="relative">
+                <a href="details-0.html">
+                    <img src="./img/veste.png" class="product-img" alt="Veste">
+                    <span class="badge badge-primary">Coup de cœur</span>
+                </a>
+            </div>
+            <h3><a href="details-0.html">Veste en Jean Upcyclée</a></h3>
+            <div class="flex-between mt-1">
+                <span class="price">45€</span>
+                <span class="text-through">80€</span>
+            </div>
+            <form action="panier.php" method="POST">
+                <input type="hidden" name="action" value="ajouter">
+                <input type="hidden" name="nom" value="Veste en Jean">
+                <input type="hidden" name="prix" value="45">
+                <button type="submit" class="btn-cart">Ajouter au panier</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <a href="details-1.html">
+                <img src="./img/pull.png" class="product-img" alt="Pull">
+            </a>
+            <h3><a href="details-1.html">Pull Laine Teinture</a></h3>
+            <div class="mt-1">
+                <span class="price">35€</span>
+            </div>
+            <form action="panier.php" method="POST">
+                <input type="hidden" name="action" value="ajouter">
+                <input type="hidden" name="nom" value="Pull Laine">
+                <input type="hidden" name="prix" value="35">
+                <button type="submit" class="btn-cart">Ajouter au panier</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <a href="details-2.html">
+                <img src="./img/shirt.png" class="product-img" alt="T-Shirt">
+            </a>
+            <h3><a href="details-2.html">T-Shirt Vintage</a></h3>
+            <div class="mt-1">
+                <span class="price">20€</span>
+            </div>
+            <form action="panier.php" method="POST">
+                <input type="hidden" name="action" value="ajouter">
+                <input type="hidden" name="nom" value="T-Shirt Vintage">
+                <input type="hidden" name="prix" value="20">
+                <button type="submit" class="btn-cart">Ajouter au panier</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <a href="details-3.html">
+                <img src="./img/chemise.png" class="product-img" alt="Chemise">
+            </a>
+            <h3><a href="details-3.html">Chemise Brodée</a></h3>
+            <div class="mt-1">
+                <span class="price">40€</span>
+            </div>
+            <form action="panier.php" method="POST">
+                <input type="hidden" name="action" value="ajouter">
+                <input type="hidden" name="nom" value="Chemise Brodée">
+                <input type="hidden" name="prix" value="40">
+                <button type="submit" class="btn-cart">Ajouter au panier</button>
+            </form>
+        </div>
+
+        <div class="card disabled">
+            <div class="relative">
+                <p>
+                    <img src="./img/pantalong.png" class="product-img" alt="Pantalon">
+                    <span class="badge badge-dark">Épuisé</span>
+                    </p>
+            </div>
+            <h3>Pantalon Cargo</h3>
+            <div class="mt-1">
+                <span class="price">50€</span>
+            </div>
+            <button class="btn-cart" disabled>Indisponible</button>
+        </div>
+
+    </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom: 1rem; color: #fff;">
+                    <img src="./img/logoSiteT.png" alt="Logo" class="logo-img" style="filter: brightness(0) invert(1);"> 
+                    BINTED
+                </a>
+                <p style="font-size: 0.9rem; line-height: 1.6;">
+                    Nous récupérons, réparons et redistribuons les vêtements pour lutter contre la pollution textile. 
+                    <br>Un projet étudiant engagé pour les ODD 12, 13 et 15.
+                </p>
+            </div>
+            <div>
+                <h3 style="color: #fff; margin-bottom: 1rem;">Navigation</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="shop.html" style="color: #a8a29e;">Boutique Solidaire</a></li>
+                    <li><a href="info.html" style="color: #a8a29e;">Notre Mission</a></li>
+                    <li><a href="contact.html" style="color: #a8a29e;">Devenir Partenaire</a></li>
+                    <li><a href="don.html" style="color: #a8a29e;">Faire un don</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #fff; margin-bottom: 1rem;">Nous trouver</h3>
+                <p><i class="fas fa-envelope"></i> contact@binted.org</p>
+                <p><i class="fas fa-map-marker-alt"></i> Anglet, France</p>
+                <div style="margin-top: 1rem; display: flex; gap: 10px;">
+                    <a href="#" style="font-size: 1.2rem; color:white;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="font-size: 1.2rem; color:white;"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #333; font-size: 0.8rem;">
+            &copy; 2025 BINTED - Projet SAE. Tous droits réservés.
+        </div>
+    </footer>
+    <div id="modalPanier" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
+            <h2 style="color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px;">Votre Panier</h2>
+            
+            <div class="cart-items-container">
+                <p class='empty-msg'>Votre panier est vide pour le moment.</p>            </div>
+
+            <div class="cart-total">
+                Total : <strong>0 €</strong>
+            </div>
+
+            <div style="margin-top: 20px; display: flex; gap: 10px;">
+                <a href="panier.php?action=vider" class="btn-don" style="background: #ef4444; flex: 1; text-align: center;">Vider</a>
+                <a href="checkout.html" class="btn-don" style="flex: 2; text-align: center;">Commander</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- SCRIPT POUR OUVRIR/FERMER LE PANIER ---
+        var modal = document.getElementById("modalPanier");
+        var btn = document.querySelector(".btn-panier"); // On cible ton bouton "Mon Panier"
+        var span = document.getElementsByClassName("close-modal")[0];
+
+        // Quand on clique sur le bouton "Mon Panier", ça ouvre
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Quand on clique sur la croix (X), ça ferme
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Quand on clique en dehors de la boîte blanche, ça ferme aussi
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>BINTED - Merci pour votre don</title>
+    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="fa/css/all.min.css">
+    <style>
+        /* On réutilise le style du reçu existant, avec une variante couleur */
+        .receipt-box {
+            background: white; border: 1px solid #e5e5e5; max-width: 600px;
+            margin: 2rem auto; padding: 40px; border-radius: 8px; position: relative;
+            box-shadow: 0 10px 30px -10px rgba(5, 150, 105, 0.2); /* Ombre verte */
+        }
+        .heart-icon { font-size: 3rem; color: #ef4444; margin-bottom: 1rem; animation: heartbeat 1.5s infinite; }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            10% { transform: scale(1.1); }
+            20% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+        .amount-big { font-size: 3rem; font-weight: bold; color: var(--primary); margin: 1rem 0; }
+        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; margin-top: 2rem; background: #f9fafb; padding: 20px; border-radius: 8px; }
+        .label { font-size: 0.85rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+        .value { font-weight: bold; font-size: 1.1rem; }
+    </style>
+<link rel="stylesheet" href="demo.css">
+<script src="demo.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="./img/logoSiteT.png" alt="Logo" class="logo-img"> BINTED</a>
+            <ul class="nav-links">
+                <li><a href="don.html">Retour</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container text-center">
+        
+        <div style="margin-top: 3rem;">
+            <i class="fas fa-heart heart-icon"></i>
+            <h1>Merci infiniment !</h1>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                Votre générosité nous aide directement à réparer plus de vêtements et à protéger la planète.
+            </p>
+        </div>
+
+        <div class="receipt-box">
+            <div style="position: absolute; top: 20px; right: 20px; border: 3px solid var(--primary); color: var(--primary); padding: 5px 15px; font-weight: bold; transform: rotate(-10deg); opacity: 0.3;">
+                REÇU DE DON
+            </div>
+
+            <p class="text-muted">Montant du don</p>
+            <div class="amount-big">9092 €</div>
+
+            <div class="details-grid">
+                <div>
+                    <div class="label">Donateur</div>
+                    <div class="value">__PRENOM__ __NOM__</div>
+                    <div style="font-size:0.9rem; color:#666;">__EMAIL__</div>
+                </div>
+                <div>
+                    <div class="label">Détails</div>
+                    <div class="value">Réf: D-26111</div>
+                    <div class="value">28/10/2026 17:13</div>
+                    <div style="font-size:0.9rem; color:#666;">__STATUT__</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; border-top: 1px dashed #ccc; padding-top: 1rem; font-size: 0.9rem; color: #666;">
+                <p>L'association BINTED certifie avoir reçu ce don pour soutenir ses actions de recyclage textile.</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 4rem;">
+            <button onclick="window.print()" class="btn-don" style="background: #333; cursor:pointer;">
+                <i class="fas fa-print"></i> Imprimer mon reçu fiscal
+            </button>
+            <a href="index.html" style="margin-left: 15px; text-decoration: underline;">Retour à l'accueil</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
